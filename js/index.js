@@ -10,9 +10,6 @@ function handleSubmit(event) {
     event.preventDefault();
     if(input.value !== ''){
 
-    const onlyTaskContainer = document.createElement('div');
-    onlyTaskContainer.classList.add('only-tasks');
-
     const taskContainer = document.createElement('div');
     taskContainer.classList.add('task-container');
 
@@ -26,14 +23,14 @@ function handleSubmit(event) {
     label.innerText = input.value;
     input.value = '';
 
-    document.createElement('hr');
+    const lineaDivisoria = document.createElement('hr');
 
     id = id + 1;
 
-    mainTaskContainer.appendChild(onlyTaskContainer);
-    onlyTaskContainer.appendChild(taskContainer)
+    mainTaskContainer.appendChild(taskContainer);
     taskContainer.appendChild(checkbox);
     taskContainer.appendChild(label);
+    mainTaskContainer.appendChild(lineaDivisoria)
 
     
 if(id === 2){
@@ -46,12 +43,8 @@ if(id === 2){
         mainContainer.appendChild(deleteButton);
         deleteButton.appendChild(buttonDelete);
 
+        }
     }
-    
-
-    }
-
-
 }
 
 addButton.addEventListener('click', handleSubmit)
