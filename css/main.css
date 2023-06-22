@@ -67,6 +67,7 @@ form button {
 
 .task-container input{
     cursor: pointer;
+    margin-right: 5px;
 }
 
 .delete-button {
