@@ -6,10 +6,18 @@ const mainContainer = document.querySelector('main');
 const noHayTareas = document.querySelector('.no-tasks');
 
 let id = 1;
+let title = ``;
+let completed = false;
+const taskArr = [];
+let newTask = {};
 
 function handleSubmit(event) {
     event.preventDefault();
     if(input.value !== ''){
+    
+    newTask = {id, title: `Task ${id}`, completed};
+    taskArr.push(newTask);
+    console.log(taskArr);
     
     noHayTareas.classList.remove('no-tasks');
     noHayTareas.classList.add('si-tasks');
@@ -28,6 +36,7 @@ function handleSubmit(event) {
     input.value = '';
 
     const lineaDivisoria = document.createElement('hr');
+    lineaDivisoria.classList.add(`linea${id}`);
 
     id = id + 1;
 
