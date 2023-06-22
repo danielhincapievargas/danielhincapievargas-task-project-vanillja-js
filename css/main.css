@@ -93,3 +93,14 @@ form button {
     text-align: center;
     font-weight: bold;
 }
+
+.no-tasks {
+    width: 100%;
+    background-color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.si-tasks {
+    display: none;
+}

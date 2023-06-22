@@ -3,12 +3,16 @@ const addButton = document.querySelector('.add-button');
 const taskList = document.querySelector('.task-list');
 const mainTaskContainer = document.querySelector('.main-task-container');
 const mainContainer = document.querySelector('main');
+const noHayTareas = document.querySelector('.no-tasks');
 
 let id = 1;
 
 function handleSubmit(event) {
     event.preventDefault();
     if(input.value !== ''){
+    
+    noHayTareas.classList.remove('no-tasks');
+    noHayTareas.classList.add('si-tasks');
 
     const taskContainer = document.createElement('div');
     taskContainer.classList.add('task-container');
