@@ -101,6 +101,15 @@ form button {
     text-align: center;
 }
 
-.si-tasks {
+.si-tasks  {
     display: none;
+}
+
+.hide-button {
+    display: none;
+}
+
+
+.task-container .checked {
+    text-decoration: line-through;
 }
